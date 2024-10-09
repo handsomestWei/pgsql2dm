@@ -12,14 +12,14 @@
 使用相同语义的sql来替代，或者放在业务代码里实现。
 
 ## 常见问题
-+ [自动表分区]()
-+ [数组集合运算]()
-+ [group by别名]()
-+ [其他]()
++ [自动表分区](https://github.com/handsomestWei/pgsql2dm/tree/main/partition-by)
++ [数组集合运算](https://github.com/handsomestWei/pgsql2dm/tree/main/array-opt)
++ [group by别名](https://github.com/handsomestWei/pgsql2dm/tree/main/group-by-alias)
++ [其他](https://github.com/handsomestWei/pgsql2dm/tree/main/others)
 
 ## 适配方案
 ### 动态修改
 减少对原项目的侵入。利用数据库连接库提供的能力，例如使用阿里的Druid数据源，运行时拦截sql，并自定义改写，实现动态修改。
 
 ### 静态修改
-可以使用[mybatis-mapper2sql工具](https://github.com/handsomestWei/mybatis-mapper2sql)
+可以使用工具[mybatis-mapper2sql](https://github.com/handsomestWei/mybatis-mapper2sql)做抽取和测试验证

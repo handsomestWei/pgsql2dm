@@ -1,4 +1,4 @@
-# auto-partition
+# partition-by
 自动表分区
 
 ## pg实现
