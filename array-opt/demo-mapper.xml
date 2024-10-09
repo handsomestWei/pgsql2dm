@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xxx.dao.DemoDao">
+    <resultMap type="DemoResult" id="DemoResultMap">
+        <result property="indexCodes" column="index_codes" jdbcType="ARRAY"
+                typeHandler="com.xxx.DmArrayTypeHandler"/>
+    </resultMap>
+
+    <insert id="add" parameterType="DemoResult">
+        insert into tb_xxx (index_codes)
+        values (#{indexCodes,typeHandler=com.xxx.DmArrayTypeHandler})
+    </insert>
+
+</mapper>
